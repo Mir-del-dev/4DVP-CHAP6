@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 'lint Code Base'
-        uses: github/super-linter/slim@4
+        uses: github/super-linter/slim@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
