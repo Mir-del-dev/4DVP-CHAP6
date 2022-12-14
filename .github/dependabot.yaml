@@ -1,0 +1,12 @@
+version: 4.15.0
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    shedule:
+    interval: "daily"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    shedule:
+      interval: "daily"
+      
