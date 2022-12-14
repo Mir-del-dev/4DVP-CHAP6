@@ -1,0 +1,18 @@
+
+on:
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint:
+    name: lint code Base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code 
+        uses: actions/checkout@v3
+
+      - name: 'lint Code Base'
+        uses: github/super-linter/slim@4
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
